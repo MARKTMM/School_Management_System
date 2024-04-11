@@ -4,10 +4,9 @@ import java.util.List;
 /**
  * This class represents a teacher at the school.
  */
-public class Teacher extends Person {
-    private int paidSalary;
+public class Teacher extends Employee {
+    private final List<Course> coursesTaught;
     private int totalSalary;
-    private List<Course> coursesTaught;
 
     /**
      * Constructs a Teacher object with the specified id, name, paid salary, and total salary.
@@ -16,28 +15,12 @@ public class Teacher extends Person {
      * @param paidSalary The amount of salary paid to the teacher.
      * @param totalSalary The total salary allocated for the teacher.
      */
-    public Teacher(int id, String name, int paidSalary, int totalSalary) {
-        super(id, name);
-        this.paidSalary = 0;
-        this.totalSalary = 20000;
+    public Teacher(int id, String name, int paidSalary, List<Course> coursesTaught, int totalSalary) {
+        super(id, name, paidSalary);
         this.coursesTaught = new ArrayList<>();
+        this.totalSalary = totalSalary;
     }
 
-    /**
-     * Retrieves the amount of salary paid to the teacher.
-     * @return The amount of salary paid.
-     */
-    public int getPaidSalary() {
-        return paidSalary;
-    }
-
-    /**
-     * Sets the amount of salary paid to the teacher.
-     * @param amount The amount of salary to be set.
-     */
-    public void addPaidSalary(int amount) {
-        this.paidSalary += amount;
-    }
     /**
      * Retrieves the total salary allocated for the teacher.
      * @return The total salary allocated.
@@ -50,7 +33,7 @@ public class Teacher extends Person {
      * @param totalSalary The total salary to be set.
      */
     public void setTotalSalary(int totalSalary) {
-        this.totalSalary = 20000;
+        this.totalSalary = totalSalary;
     }
     /**
      * Retrieves the list of courses taught by the teacher.

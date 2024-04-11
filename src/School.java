@@ -21,6 +21,7 @@ public class School {
         totalMoneySpent = 0;
     }
 
+
     public Principal getPrincipal() {
         return principal;
     }
@@ -53,7 +54,6 @@ public class School {
     public void addStudent(Student student) {
         students.add(student);
     }
-
     /**
      * @return
      */
@@ -109,7 +109,7 @@ public class School {
     }
     /**
      * Adds the totalmoney spent by the school i.e salaries.
-     * @param MoneySpent that is to be added.
+     * @param moneySpent that is to be added.
      */
     public void updateTotalMoneySpent(int moneySpent) {
         totalMoneySpent -= moneySpent;

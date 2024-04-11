@@ -2,20 +2,20 @@
  * This class represents a finance officer with common attributes like id and name,
  * along with additional attributes related to salary.
  */
-public class FinanceOfficer extends Person {
-    private int salary;
+public class FinanceOfficer extends Employee {
+    private int totalSalary;
 
-    public FinanceOfficer(int id, String name, int salary) {
-        super(id, name); // Call the constructor of the superclass (Person)
-        this.salary = salary;
+    public FinanceOfficer(int id, String name, int paidSalary,int totalSalary) {
+        super(id, name, paidSalary); // Call the constructor of the superclass (Person)
+        this.totalSalary = 50000;
     }
 
-    public int getSalary() {
-        return salary;
+    public int getTotalSalary() {
+        return totalSalary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public void setTotalSalary(int totalSalary) {
+        this.totalSalary = 50000;
     }
 
     /**
