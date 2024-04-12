@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * The Main class serves as the entry point for the application and contains the main method.
@@ -11,25 +12,52 @@ public class Main {
      */
     public static void main(String[] args) {
         // Create instances of Teacher class
-        Teacher victor = new Teacher(1, "Victor Chinedum", 0, "Devops Java", 200000);
-        Teacher kunal = new Teacher(2, "Kunal Kushwaha", 0, "Unknown", 150000); // Corrected name
-        Teacher cyril = new Teacher(3, "Cyril Tumbo", 0, "Unknown", 150000); // Corrected name
+        Scanner scanner = new Scanner(System.in);
 
-        // Create a list to store teachers
-        List<Teacher> teacherList = new ArrayList<>();
-        teacherList.add(victor);
-        teacherList.add(kunal);
-        teacherList.add(cyril);
+        // Instantiate objects
+        Principal principal = new Principal(1, "Mr Bayani");
+        Teacher teacher = new Teacher(2, "Teacher Yvonne");
+        Student student = new Student(3, "Mark Masai", new Course("Course Name"), new Classes("Class Name"), true);
+        FinanceOfficer financeOfficer = new FinanceOfficer(4, "Mr Dakot");
+        Applicant applicant = new Applicant(5, "Applicant Name", 15);
 
-        // Create instances of Student class
-        Student mark = new Student(1, "Mark Mwangi", "Devops Java", "Cohort 15", 0, 100000);
-        Student caleb = new Student(2, "Caleb Baraka", "Fullstack Engineer", "Cohort 19", 0, 80000);
-        Student jennifer = new Student(3, "Jennifer Karanja", "Cyber Security", "Cohort 15", 0 , 90000); // Corrected name
+        // Interactive menu
+        int choice;
+        do {
+            System.out.println("\nSchool Management System Menu:");
+            System.out.println("1. Receive Salary (Principal)");
+            System.out.println("2. Teach Course (Teacher)");
+            System.out.println("3. Expel Student (Principal)");
+            System.out.println("4. Manage Payments (Finance Officer)");
+            System.out.println("5. Admit Applicant (Principal)");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
 
-        // Create a list to store students
-        List<Student> studentList = new ArrayList<>();
-        studentList.add(mark);
-        studentList.add(caleb);
-        studentList.add(jennifer);
+            switch (choice) {
+                case 1:
+                    principal.receiveSalary();
+                    break;
+                case 2:
+                    teacher.teachCourse(new Course("Math"));
+                    break;
+                case 3:
+                    principal.expelStudent(student);
+                    break;
+                case 4:
+                    financeOfficer.managePayments();
+                    break;
+                case 5:
+                    principal.admitApplicant(applicant);
+                    break;
+                case 6:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice != 6);
+
+        scanner.close();
     }
 }
