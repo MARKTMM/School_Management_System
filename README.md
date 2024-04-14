@@ -75,16 +75,10 @@ The School Management System is a Java application designed to manage various as
 ## Class Diagram
 ![Class Diagram](link-to-your-class-diagram-image)
 
-## Dependencies
-- Java SE Development Kit (JDK)
-- Any additional libraries or frameworks used in the project
-
 ## Usage
-- Provide instructions on how to run or use the School Management System.
+- Instructions on how to run or use the School Management System.
+  Still under deveopment. Instructions will be out soon.
 
 ## Contributors
-- List contributors or credits for the project.
-
-## License
-- Specify the license under which the School Management System is distributed.
-
+- Mark Mwangi
+- Kaleb Baraka
