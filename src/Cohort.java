@@ -1,11 +1,12 @@
 /**
  * This class represents a cohort, which is a class (e.g., 10th grade, 11th grade, etc.).
  */
-public class Cohort extends Person {
+public class Cohort  {
+    private String name;
     private int cohortId;
 
     public Cohort(String name, int cohortId) {
-        super(cohortId, name);
+        this.name = name;
         this.cohortId = cohortId;
     }
 
