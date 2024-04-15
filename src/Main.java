@@ -38,9 +38,9 @@ public class Main {
         studentList.add(jennifer);
 
         // Create instances of courses class
-        Course devops = new Course("Devops Java", 001);
-        Course fullstack = new Course("Fullstack Engineer", 002);
-        Course security = new Course("Cyber Security", 003);
+        Course devops = new Course("Devops Java", 1);
+        Course fullstack = new Course("Fullstack Engineer", 2);
+        Course security = new Course("Cyber Security",   3);
 
         // Create a list to store courses
         List<Course> coursesList = new ArrayList<>();
