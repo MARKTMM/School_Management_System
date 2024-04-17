@@ -21,6 +21,9 @@ public class School {
         totalMoneySpent = 0;
     }
 
+    public School(List<Teacher> teacherList, List<Student> studentList, List<Course> coursesList, List<Cohort> cohortList) {
+    }
+
 
     public Principal getPrincipal() {
         return principal;
