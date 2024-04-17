@@ -10,21 +10,19 @@ public class Main {
      * @param args Command-line arguments passed to the program.
      */
     public static void main(String[] args) {
+        // Create instance of Principal class
+        Principal elvis = new Principal(0, "Elvis James", 0, 40000);
+
         // Create instances of Teacher class
-        Teacher victor = new Teacher(1, "Victor Chinedum", 0, "Devops Java", 200000);
-        Teacher kunal = new Teacher(2, "Kunal Kushwaha", 0, "Unknown", 150000);
-        Teacher cyril = new Teacher(3, "Cyril Tumbo", 0, "Unknown", 150000);
+        Teacher victor = new Teacher(2, "Victor Chinedum", 0, "Devops Java", 200000);
+        Teacher kunal = new Teacher(3, "Kunal Kushwaha", 0, "Unknown", 150000);
+        Teacher cyril = new Teacher(4, "Cyril Tumbo", 0, "Unknown", 150000);
 
         // Create a list to store teachers
         List<Teacher> teacherList = new ArrayList<>();
         teacherList.add(victor);
         teacherList.add(kunal);
         teacherList.add(cyril);
-
-        /** Create a list to store coursesTaught
-        List<Course> courseList = new ArrayList<>();
-        courseList.add(Devops_java);
-         */
 
         // Create instances of Student class
         Student mark = new Student(1, "Mark Mwangi", "DevopsJava", "Cohort 15", 0, 100000);
@@ -37,6 +35,9 @@ public class Main {
         studentList.add(caleb);
         studentList.add(jennifer);
 
+        //Create instances of FinanceOfficer class
+        FinanceOfficer simon = new FinanceOfficer(1, "Simon Karanja", 0, 50000);
+
         // Create instances of courses class
         Course devops = new Course("Devops Java", 1);
         Course fullstack = new Course("Fullstack Engineer", 2);
@@ -47,6 +48,19 @@ public class Main {
         coursesList.add(devops);
         coursesList.add(fullstack);
         coursesList.add(security);
+
+        // Create instances of cohorts class
+        Cohort cohort = new Cohort("1st Cohort");
+        Cohort cohort = new Cohort("2nd Cohort");
+        Cohort cohort = new Cohort("3rd Cohort");
+        Cohort cohort = new Cohort("4th Cohort");
+
+        // Create a list to store cohorts
+        List<Cohort> cohortList = new ArrayList<>();
+        cohortList.add();
+        cohortList.add();
+        cohortList.add();
+        cohortList.add();
 
         School markUniversity = new School(teacherList, studentList, coursesList);
         System.out.println("Mark University has earned " + markUniversity.getTotalMoneyEarned());
