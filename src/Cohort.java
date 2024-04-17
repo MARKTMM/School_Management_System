@@ -1,19 +1,20 @@
+import java.util.List;
+
 /**
  * This class represents a cohort, which is a class (e.g., 10th grade, 11th grade, etc.).
  */
-public class Cohort extends Person {
-    private int cohortId;
+public class Cohort  {
+    private String cohort;
 
-    public Cohort(String name, int cohortId) {
-        super(cohortId, name);
-        this.cohortId = cohortId;
+    public Cohort(String cohort) {
+        this.cohort = cohort;
     }
 
-    public int getCohortId() {
-        return cohortId;
+    public String getCohort() {
+        return cohort;
     }
 
-    public void setCohortId(int cohortId) {
-        this.cohortId = cohortId;
+    public void setCohort(String cohort) {
+        this.cohort = cohort;
     }
 }

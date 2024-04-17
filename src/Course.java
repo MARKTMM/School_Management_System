@@ -1,11 +1,12 @@
 /**
  * This class represents a course offered at the school.
  */
-public class Course extends Person {
+public class Course {
     private int courseId;
+    private String name;
 
     public Course(String name, int courseId) {
-        super(courseId, name);
+        this.name = name;
         this.courseId = courseId;
     }
 
