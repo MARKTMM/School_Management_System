@@ -10,8 +10,10 @@ public class Main {
      * @param args Command-line arguments passed to the program.
      */
     public static void main(String[] args) {
-        // Create instance of Principal class
+        // Create instance of Principal and financeOfficer class
         Principal elvis = new Principal(0, "Elvis James", 0, 40000);
+        FinanceOfficer simon = new FinanceOfficer(1, "Simon Karanja", 0, 50000);
+
 
         // Create instances of Teacher class
         Teacher victor = new Teacher(2, "Victor Chinedum", 0, "Devops Java", 200000);
@@ -35,9 +37,6 @@ public class Main {
         studentList.add(caleb);
         studentList.add(jennifer);
 
-        //Create instances of FinanceOfficer class
-        FinanceOfficer simon = new FinanceOfficer(1, "Simon Karanja", 0, 50000);
-
         // Create instances of courses class
         Course devops = new Course("Devops Java", 1);
         Course fullstack = new Course("Fullstack Engineer", 2);
@@ -50,19 +49,19 @@ public class Main {
         coursesList.add(security);
 
         // Create instances of cohorts class
-        Cohort cohort = new Cohort("1st Cohort");
-        Cohort cohort = new Cohort("2nd Cohort");
-        Cohort cohort = new Cohort("3rd Cohort");
-        Cohort cohort = new Cohort("4th Cohort");
+        Cohort cohort1 = new Cohort("1st Cohort");
+        Cohort cohort2 = new Cohort("2nd Cohort");
+        Cohort cohort3 = new Cohort("3rd Cohort");
+        Cohort cohort4 = new Cohort("4th Cohort");
 
         // Create a list to store cohorts
         List<Cohort> cohortList = new ArrayList<>();
-        cohortList.add();
-        cohortList.add();
-        cohortList.add();
-        cohortList.add();
+        cohortList.add(cohort1);
+        cohortList.add(cohort2);
+        cohortList.add(cohort3);
+        cohortList.add(cohort4);
 
-        School markUniversity = new School(teacherList, studentList, coursesList);
+        School markUniversity = new School(teacherList, studentList, coursesList,cohortList);
         System.out.println("Mark University has earned " + markUniversity.getTotalMoneyEarned());
     }
 }
