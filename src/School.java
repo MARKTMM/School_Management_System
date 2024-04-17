@@ -21,9 +21,9 @@ public class School {
         totalMoneySpent = 0;
     }
 
+    // Create constructor
     public School(List<Teacher> teacherList, List<Student> studentList, List<Course> coursesList, List<Cohort> cohortList) {
     }
-
 
     public Principal getPrincipal() {
         return principal;
