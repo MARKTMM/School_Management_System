@@ -1,20 +1,20 @@
+import java.util.List;
+
 /**
  * This class represents a cohort, which is a class (e.g., 10th grade, 11th grade, etc.).
  */
 public class Cohort  {
-    private String name;
-    private int cohortId;
+    private List<Cohort> cohorts;
 
-    public Cohort(String name, int cohortId) {
-        this.name = name;
-        this.cohortId = cohortId;
+    public Cohort(List<Cohort> cohorts) {
+        this.cohorts = cohorts;
     }
 
-    public int getCohortId() {
-        return cohortId;
+    public List<Cohort> getCohorts() {
+        return cohorts;
     }
 
-    public void setCohortId(int cohortId) {
-        this.cohortId = cohortId;
+    public void setCohorts(List<Cohort> cohorts) {
+        this.cohorts = cohorts;
     }
 }
