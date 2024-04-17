@@ -61,7 +61,7 @@ public class Main {
         cohortList.add(cohort3);
         cohortList.add(cohort4);
 
-        School markUniversity = new School(teacherList, studentList, coursesList,cohortList);
+        School markUniversity = new School(teacherList, studentList, coursesList, cohortList);
         System.out.println("Mark University has earned " + markUniversity.getTotalMoneyEarned());
     }
 }
